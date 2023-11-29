@@ -1,0 +1,40 @@
+
+name: "gin-admin"
+ip: "0.0.0.0"
+port: 8081
+version: "v0.0.1"
+mode: debug
+
+#数据库
+mysql:
+  host: '192.168.0.103'
+  port: "3306"
+  dbname: "gingoods"
+  user: "root"
+  password: "123456"
+  #最大连接数
+  max_open_conns: 100
+  max_idle_conns: 10
+
+
+#日志配置
+log:
+  level: "debug"
+  filename: "./log/gin-admin.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+
+#redis配置
+redis:
+  host: "192.168.0.90:6379"
+  password: "1@#4"
+  db: 0
+  pool_size: 100
+
+#jenkins配置
+jenkins:
+  host: "http://192.168.0.91:8080"
+  user: "admin"
+  password: "1234"
